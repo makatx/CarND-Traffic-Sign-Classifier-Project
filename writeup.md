@@ -67,10 +67,10 @@ Using the tuning, tests and reasons above, I decided that the best network confi
 | Fully connected 		| output 43 (logits)						 	|
 | Softmax				| Classification probabilities					|
 
-###Results
+##Results
 The final network achieved 0.973 validation accuracy after 75 epochs of training.
 The accuracy on test set was 0.965.
 
-###Testing on web images
+##Testing on web images
 I gathered some traffic sign images from Google StreetView over some roads in Germany. This test set had a few images that the network wasn't trained on however, it was interesting to see the softmax probabilities for them.
 ![web-images] [web-images]
