@@ -21,7 +21,7 @@ Number of classes = 43
 
 ![Histogram] [histogram]
 
-![Classes Summary] [classes]
+![classes] [classes summary]
 
 ### The Approach & Findings
 There are numerous architectures that are possible with the design of the ConvNet so I've used, as suggested in the instructions, the LeNet (0.887 validation accuracy with all relu activations) as the starting point.
