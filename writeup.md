@@ -1,4 +1,5 @@
-#Traffic Sign Classifier
+# Traffic Sign Classifier
+
 *Using ConvNets*
 
 [//]: # (Image References)
@@ -22,7 +23,7 @@ Number of classes = 43
 
 ![Classes Summary] [classes]
 
-###The Approach & Findings
+### The Approach & Findings
 There are numerous architectures that are possible with the design of the ConvNet so I've used, as suggested in the instructions, the LeNet (0.887 validation accuracy with all relu activations) as the starting point.
 Several changes were tested and the following is what I've learned:
 
@@ -46,7 +47,7 @@ The number of steps that tuned learning the best was 500.
 - **Dropout:** I used dropout technique initially but found that the network didnt train at all. I suspect this was due to the presence of relu activations which also essentially suppress some outputs and hence there were too few non-zeros values for the classifier to effectively use.
 
 - **Pooling:** While trying out different configurations I removed the pooling layers and noticed a significant improvement in the network output. So my final architecture had no intermediate pooling layers (also suggested in Andrej Karpathy's lectures), except the last Conv layer, used so that the processing became easier.
-##The Final Model
+## The Final Model
 Unfortunately, there isn't much time to test all combinations of the techniques, activations, layers numbers, filter sizes etc. to tune the best network.
 Using the tuning, tests and reasons above, I decided that the best network configuration for the objective is as summarized below:
 
@@ -67,10 +68,10 @@ Using the tuning, tests and reasons above, I decided that the best network confi
 | Fully connected 		| output 43 (logits)						 	|
 | Softmax				| Classification probabilities					|
 
-##Results
+### Results
 The final network achieved 0.973 validation accuracy after 75 epochs of training.
 The accuracy on test set was 0.965.
 
-##Testing on web images
+### Testing on web images
 I gathered some traffic sign images from Google StreetView over some roads in Germany. This test set had a few images that the network wasn't trained on however, it was interesting to see the softmax probabilities for them.
 ![web-images] [web-images]
